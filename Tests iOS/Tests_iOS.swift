@@ -7,6 +7,9 @@
 
 import XCTest
 
+// This does not work for UI Test targets
+// @testable import UndefinedSymbolApp
+
 class Tests_iOS: XCTestCase {
 
     override func setUpWithError() throws {
@@ -38,4 +41,9 @@ class Tests_iOS: XCTestCase {
             }
         }
     }
+    
+// This causes a compiler error:
+//    func testMagicModelCausingAnError() throws {
+//        let magicModel = MagicModel(title: "The model")
+//    }
 }
